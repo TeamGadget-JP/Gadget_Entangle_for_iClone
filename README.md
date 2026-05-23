@@ -62,7 +62,6 @@ Also, regardless of language, please feel free to leave any comments, feedback, 
 
 ---
 ## 日本語 ##
----
 # Gadget Entangle for iClone (GEi)
 
 ## GEiの主要機能 ##
