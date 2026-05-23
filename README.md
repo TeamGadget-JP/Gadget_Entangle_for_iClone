@@ -61,6 +61,7 @@ Also, regardless of language, please feel free to leave any comments, feedback, 
 2. Turn on `Hybrid Mode` in the GEi UI panel on the iClone side and connect. You are all set!
 
 ---
+## 日本語 ##
 ---
 # Gadget Entangle for iClone (GEi)
 
