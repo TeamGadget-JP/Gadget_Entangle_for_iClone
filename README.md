@@ -60,6 +60,8 @@ Also, regardless of language, please feel free to leave any comments, feedback, 
 1. In the Inspector for `GEC_Bone Entangler`, leave the `Neck` and `Head` fields empty. This prevents the character from receiving bone data above the neck from Cascadeur.
 2. Turn on `Hybrid Mode` in the GEi UI panel on the iClone side and connect. You are all set!
 
+---
+---
 # Gadget Entangle for iClone (GEi)
 
 ## GEiの主要機能 ##
