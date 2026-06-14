@@ -248,6 +248,19 @@ namespace Gadget.GEi
                         string boneName = Encoding.UTF8.GetString(br.ReadBytes(nameLen));
                         br.ReadByte(); 
                         
+                        // Normalize BoneRoot naming across CC3 (RL_BoneRoot) and CC4 (CC_Base_BoneRoot) generations
+                        if (boneName.Contains("BoneRoot"))
+                        {
+                            if (targetPos.ContainsKey("CC_Base_BoneRoot")) 
+                            {
+                                boneName = "CC_Base_BoneRoot";
+                            }
+                            else if (targetPos.ContainsKey("RL_BoneRoot")) 
+                            {
+                                boneName = "RL_BoneRoot";
+                            }
+                        }
+                        
                         incomingBones.Add(boneName); 
 
                         float tx = br.ReadSingle(), ty = br.ReadSingle(), tz = br.ReadSingle();
@@ -255,7 +268,15 @@ namespace Gadget.GEi
 
                         if (targetPos.ContainsKey(boneName))
                         {
-                            targetPos[boneName] = new Vector3(tx * posMultiplier.x, ty * posMultiplier.y, tz * posMultiplier.z) * positionScale;
+                            if (boneName.Contains("BoneRoot"))
+                            {
+                                // Swap Y and Z axes for BoneRoot to match Unity's coordinate system
+                                targetPos[boneName] = new Vector3(tx * posMultiplier.x, tz * posMultiplier.y, -ty * posMultiplier.z) * positionScale;
+                            }
+                            else
+                            {
+                                targetPos[boneName] = new Vector3(tx * posMultiplier.x, ty * posMultiplier.y, tz * posMultiplier.z) * positionScale;
+                            }
 
                             if (enableEyeTuning && boneName.Contains("Eye"))
                             {
@@ -264,7 +285,16 @@ namespace Gadget.GEi
                             }
                             else
                             {
-                                targetRot[boneName] = new Quaternion(rx * rotMultiplier.x, ry * rotMultiplier.y, rz * rotMultiplier.z, rw * rotMultiplier.w);
+                                if (boneName.Contains("BoneRoot"))
+                                {
+                                    // Swap Y and Z axes for BoneRoot rotation and apply a -90 degree X-axis offset for FBX import alignment
+                                    Quaternion swappedRot = new Quaternion(rx * rotMultiplier.x, rz * rotMultiplier.y, -ry * rotMultiplier.z, rw * rotMultiplier.w);
+                                    targetRot[boneName] = swappedRot * Quaternion.Euler(-90f, 0f, 0f);
+                                }
+                                else
+                                {
+                                    targetRot[boneName] = new Quaternion(rx * rotMultiplier.x, ry * rotMultiplier.y, rz * rotMultiplier.z, rw * rotMultiplier.w);
+                                }
                             }
                         }
                     }
