@@ -17,22 +17,6 @@
 1. Developed with the assumption that the official Reallusion plugins `Unity Pipeline` and `Unity Auto Setup` are installed and used.
 2. Assumes a workflow of character setup in Character Creator 5 (CC5) and animation creation in iClone 8.
 
-## Development Purpose and Future Direction (Open Source)
-The ultimate goal of developing GEC, GEP, GTransporter, GETL, and now GEi is to realize a personal-scale Virtual Production (VP) environment based on Unity.
-These tools are built specifically to achieve that goal. Therefore, if you use them for other purposes, they might not behave as intended. While creative workflows might solve some issues, there will be cases where you need to modify the scripts directly. 
-For this reason, I have decided to make this release Open Source (OSS). Furthermore, previously released tools will also be transitioned to open source gradually, except for those that must comply with original developer licenses.
-
-## ⚠️ Important Notices (Please Read)
-* **No Support (As-is Delivery):** The developer is a personal FA (Factory Automation) engineer with a full-time day job. Therefore, it is practically impossible to provide individual technical support tailored to specific environments. This tool is provided "Completely Free / No Support".
-* However, I do plan to provide bug fixes and version updates irregularly. Feedback from everyone is highly welcome! Even the smallest details are helpful, so please don't hesitate to post them.
-
-## A Request from the Developer
-If this tool helps your production, I would be thrilled if you could **Subscribe to my YouTube channel and leave a Like!**
-Your support is the greatest motivation for my future development!
-▶️ [https://youtu.be/kNBWSCf2cIw](https://www.youtube.com/channel/UCj9OYwzMAIgYAeVkTV4wczw)
-
-Also, regardless of language, please feel free to leave any comments, feedback, or strict evaluations about your experience using the tool. It will greatly help future development!
-
 ---
 **Windows Only:** This tool currently runs only on Windows environments (as it uses the Windows API). It does not work on macOS or Linux.
 
@@ -80,24 +64,6 @@ Also, regardless of language, please feel free to leave any comments, feedback, 
 ## 前提条件 ##
 1. 公式プラグイン`Unity Pipeline``Unity Auto Setup`を使用することを前提に開発しています。
 2. CC5でキャラクターセットアップ、iClone8でアニメーション作成を前提としています。
-
-##  開発の目的そして今後の方針(OSS化)
-GEC、GEP、GTransporter、GETL、そして今回のGEiはUnityをベースとした映像制作環境(VP)を個人ベースで実現できないか？というのが最大の開発目的です。
-そしてそれを実現することを目標にツールの制作をしています、ですから、その他の用途でご使用される方は意図する動作をしてくれないケースもあるかと思います、
-運用方法の工夫などで解決できれば良いのですが、スクリプトを直接いじらないと駄目なこともあるでしょう。そこで今回の公開からはOSSとした次第です。
-また、いままでリリーズ済みのツールも開発元ライセンスを遵守しなければならない物以外は今後、順次OSS公開に切り替えていきます。
-
-##  ⚠️ 重要な注意事項（必ずお読みください）
-* **サポートなし（現状渡し）:** 開発者は普段、別の本業を抱えるFA系個人エンジニアです。そのため、個別の環境に合わせた技術サポートを提供することは事実上不可能です。本ツールは「完全無料・サポート対象外」として提供されます。
-* しかしながら、バグフィックスやバージョンアップは不定期ながらも行って行くつもりです、皆様からのフィードバックは大歓迎です。些細なことでもどんどん書き込んで下さると助かります！
-
-##  開発者からのお願い
-もし皆様の制作のお役に立てましたら、ぜひ**YouTubeチャンネルの登録と高評価**をお願いいたします
-皆様からの応援が、今後の開発の最大のモチベーションになります
-▶️ [https://youtu.be/kNBWSCf2cIw](https://www.youtube.com/channel/UCj9OYwzMAIgYAeVkTV4wczw)
-
-また、言語問わずツールの使用感や厳しい評価など、何でも構いませんので意見や感想等をお気軽に書き込みお願いします！
-今後の開発に大いに役立ちます。
 
 ---
 **Windows専用:** 本ツールは現在、Windows環境でのみ動作します(Windows APIを使用しているため)。macOSやLinuxでは動作しません。
